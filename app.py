@@ -9,7 +9,7 @@ from plotly.subplots import make_subplots
 
 # ---------- ページ設定 ----------
 st.set_page_config(page_title="Stock Viewer", layout="wide")
-st.title("TradingView 風 マルチ銘柄チャート")
+st.title("マルチ銘柄チャート")
 
 # ---------- サイドバー ----------
 st.sidebar.header("表示設定")
@@ -140,3 +140,4 @@ for idx, symbol in enumerate(tickers):
         st.caption(symbol)
         # --- ★keyを追加してエラー回避 ---
         st.plotly_chart(fig, use_container_width=True, config=plot_cfg, key=f"chart_{symbol}_{idx}")
+
